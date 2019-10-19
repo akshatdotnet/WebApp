@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="283696aa93d7470cadbdab1421b04a4c" Name="Diagram1">
+        <EntityTypeShape EntityType="MVCTutorialModel.Country" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.Department" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.Employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.ImageStore" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.Product" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.Site" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.SiteUser" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.State" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTutorialModel.UserRole" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="MVCTutorialModel.FK_State_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTutorialModel.FK_Employee_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTutorialModel.FK_Sites_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTutorialModel.FK_Product_ImageStore" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTutorialModel.FK_SiteUser_UserRole" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MVCTutorialModel.SelectedEmployee" Width="1.5" PointX="5.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

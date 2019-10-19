@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MVCTutorial.Models.MenuItem>
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h4>Menu Item</h4>
+    </div>
+    <div class="panel-body">
+
+        <ul class="list-group">
+
+            @if (Model != null)
+            {
+
+                foreach (var item in Model)
+                {
+
+                    <li class="list-group-item"><a href="@item.Link" class="btn btn-primary btn-block">@item.LinkName</a></li>
+
+                }
+            }
+
+            <li class="list-group-item"><a href="http://youtube.com/aapkanigam" class="btn btn-danger btn-block">Youtube Channel</a></li>
+            <li class="list-group-item"><a href="http://technotipstutorial.blogspot.com" class="btn btn-warning btn-block">Official Blog</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="thumbnail">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Director Message</h3>
+        </div>
+    </div>
+    <img src="~/Content/Images/vaishnov.jpg" alt="..." style="margin-top:-20px">
+    <div class="caption">
+        <h3>Somya Gupta</h3>
+        <p>&para; Have faith in us, We will give you full satisfaction by providing best service. &para;</p>
+        <p><a href="#" class="btn btn-primary" role="button">See more</a> </p>
+    </div>
+</div>

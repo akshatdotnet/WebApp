@@ -1,0 +1,39 @@
+﻿@model MVCTutorial.Models.SelectedEmployee
+@{
+    ViewBag.Title = "AddOrEdit";
+}
+
+<h2>Searchable and Multiselect DropDown in MVC</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            <label>Select Employee</label>
+            @*Normal Dropdown*@
+            @Html.DropDownListFor(model => model.SelectedEmployeeIds, new SelectList(Model.EmployeeCollection,"EmployeeID","Name"), new { id = "normalDropdown"})
+
+            <input type="submit" name="name" value="submit" />
+
+        </div>
+
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            // normal dropdown
+            //$("#normalDropdown").chosen();//preferable
+
+            $("#normalDropdown").chosen({
+                //disable_search: true
+                disable_search_threshol : 5
+            });
+        });
+
+    </script>   
+    
+    }

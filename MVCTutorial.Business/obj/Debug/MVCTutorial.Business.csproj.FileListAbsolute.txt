@@ -1,0 +1,36 @@
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Business.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Business.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Domain.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Domain.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.csprojResolveAssemblyReference.cache
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\EntityFramework.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Repository.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Repository.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Business\bin\Debug\EntityFramework.xml
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Business.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Business.pdb
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\EntityFramework.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Domain.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Repository.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Domain.pdb
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Repository.pdb
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\EntityFramework.xml
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.csprojResolveAssemblyReference.cache
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Business.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Business.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\EntityFramework.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Domain.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Repository.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Domain.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Repository.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\EntityFramework.xml
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\bin\Debug\MVCTutorial.Repository.dll.config
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.csprojAssemblyReference.cache
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.csproj.CoreCompileInputs.cache
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Business\obj\Debug\MVCTutorial.Business.csproj.CopyComplete

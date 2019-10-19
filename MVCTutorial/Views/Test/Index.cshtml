@@ -1,0 +1,261 @@
+﻿@model MVCTutorial.Models.EmployeeViewModel
+@{
+    ViewBag.Title = "Index";
+    // Layout = null;
+}
+
+<div class="panel panel-body" style="min-height:256px">
+
+    <div class="col-md-3">
+
+        @{ Html.RenderAction("SideMenu", "Test");}
+
+    </div>
+
+    <div class="col-md-9">
+
+       
+        <div class="well">
+            <a href="#" class="btn btn-primary" onclick="AddEditEmployee(0)">Add New Employee </a>
+
+            <a href="#" class="btn btn-default" onclick="SendOTP()">Send OTP Example</a>
+
+        </div>
+        <div class="well">
+
+            <div class="col-md-3">
+                <input type="text" id="EName" class="form-control" placeholder="Enter Employee Name" />
+
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="btn  btn-primary" onclick="FilterRecord()">Search</a>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+       
+        <table class="display" id="MyDataTable">
+            <thead>
+                <tr>
+                    <th>
+                        EmaployeeName
+                    </th>
+                    <th>
+                        Department
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Edit
+                    </th>
+                    <th>
+                        Delete
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+        <div class="modal fade" id="employeeModel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                        <h3 class="modal-title">AddEdit Employee</h3>
+                    </div>
+                    <div class="modal-body" id="employeeModalBody">
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="confirmDeleteModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                        <h3 class="modal-title">Delete Employee</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Do you want to delete this employee?</h4>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="btn btn-default " data-dismiss="modal">Dismiss</a>
+                        <a onclick="DeleteEmployee()" class="btn btn-danger">Confirm</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="successDeleteModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                        <h3 class="modal-title">Success</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Employee deleted successfully</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="btn btn-default " data-dismiss="modal">Dismiss</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <input type="hidden" id="hiddenEmployeeId" />
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        BindDataTable();
+    })
+
+
+    var oTable;
+    var FilterRecord = function () {
+
+        BindDataTable();
+    }
+
+    var BindDataTable = function (response) {
+
+        if ($.fn.DataTable.isDataTable("#MyDataTable")) {
+            debugger
+            oTable.draw();
+            //oTable.fnDraw();
+
+        }
+        else {
+            debugger
+            oTable = $("#MyDataTable").DataTable({
+                "bServerSide": true,
+                "sAjaxSource": "/Test/GetEmployeeRecord",
+                "fnServerData": function (sSource, aoData, fnCallback) {
+
+                    var EName = $("#EName").val();
+
+                    aoData.push({ "name": "EName", "value": EName });
+
+                    $.ajax({
+
+                        type: "Get",
+                        data: aoData,
+                        url: sSource,
+                        success: fnCallback
+                    })
+
+                },
+                "aoColumns": [
+
+                    { "mData": "Name" },
+                    { "mData": "DepartmentName" },
+                    { "mData": "Address" },
+                    {
+                        "mData": "EmployeeId",
+                        "render": function (EmployeeId, type, full, meta) {
+
+                            return '<a href="#" onclick="AddEditEmployee(' + EmployeeId + ')"><i class="glyphicon glyphicon-pencil"></i></a>'
+                        }
+                    },
+                    {
+                        "mData": "EmployeeId",
+                        "render": function (EmployeeId, type, full, meta) {
+
+                            return '<a href="#" onclick="ConfirmDeleteEmployee(' + EmployeeId + ')"><i class="glyphicon glyphicon-trash"></i></a>'
+                        }
+                    }
+
+
+                ]
+
+            });
+        }
+    }
+
+
+    var AddEditEmployee = function (employeeId) {
+
+        var url = "/Test/AddEditEmployee?EmployeeId=" + employeeId;
+
+        $("#employeeModalBody").load(url, function () {
+            $("#employeeModel").modal("show");
+
+        })
+
+    }
+
+    var ConfirmDeleteEmployee = function (employeeId) {
+        debugger
+        $("#hiddenEmployeeId").val(employeeId);
+        $("#confirmDeleteModal").modal("show");
+
+    }
+    var DeleteEmployee = function () {
+        debugger
+        var employeeId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+            type: "Post",
+            url: "/Test/DeleteEmployee?EmployeeId=" + employeeId,
+            success: function (result) {
+
+                if (result == true) {
+                    $("#confirmDeleteModal").modal("hide");
+
+                    $("#successModal").modal("show");
+
+                    window.location = "/Test/Index";
+
+
+                }
+
+            }
+
+        })
+
+    }
+
+    var SendOTP = function () {
+
+        $.ajax({
+            url: "/Test/SendOTP",
+            type: "post",
+            success: function (data) {
+                if (data == "success") {
+
+                    alert("OTP sent successfully");
+                    window.location = "/Test/EnterOTP";
+                }
+                else {
+                    alert("failed");
+                }
+            }
+
+
+        })
+
+    }
+
+</script>

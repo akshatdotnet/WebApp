@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "SuperAdmin";
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<div class="col-md-9">
+    <h3>@ViewBag.Message</h3>
+
+
+    <br />
+    <h2>fileupload</h2>
+</div>
+<div>
+
+    <div class="form-group">
+        <input type="file" id="myfile" />
+    </div>
+    <input id="btn1" class="btn btn-default" type="button" value="Upload" />
+</div>
+
+
+<script>
+	debugger;
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                if ($('#myfile').val() == '') {
+                    alert('Please select file');
+                    return;
+                }
+
+                var formData = new FormData();
+                var file = $('#myfile')[0];
+                formData.append('file', file.files[0]);
+                $.ajax({
+                    //url: '/api/fileUpload',
+					url: '/api/fileUpload',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (d) {
+                       alert('file is uploaded successfully')
+
+                    },
+                    error: function () {
+                        alert('Some thing went wrong');
+                    }
+                });
+            });
+        });
+</script>

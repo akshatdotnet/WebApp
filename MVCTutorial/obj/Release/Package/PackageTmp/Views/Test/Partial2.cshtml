@@ -1,0 +1,61 @@
+﻿
+@model MVCTutorial.Models.EmployeeViewModel
+
+<div>
+
+    <form id="myForm">
+        @Html.HiddenFor(m=>m.EmployeeId)
+
+        @Html.DropDownListFor(model => model.DepartmentId, ViewBag.DepartmentList as SelectList, "--select--", new { @class = "form-control" })
+
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Name" })
+
+        @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @placeholder ="Address" })
+
+        <a href="#" id="btnSubmit" class="btn btn-success btn-block">@if(Model.EmployeeId>0){<span>Update</span> }else{<span>Save</span>} </a>
+
+    </form>
+
+    <div style="text-align:center;display:none" id="loaderDiv">
+        <img src="~/Content/InternetSlowdown_Day.gif" width="150" />
+    </div>
+
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#btnSubmit").click(function () {
+
+            $("#loaderDiv").show();
+
+            var myformdata = $("#myForm").serialize();
+           
+            $.ajax({
+
+                type: "POST",
+                url: "/Test/Index",
+                data: myformdata,
+                success: function () {
+                    $("#loaderDiv").hide();
+                    $("#myModal").modal("hide");
+                    window.location.href = "/Test/Index";
+
+                }
+
+            })
+        })
+
+    })
+
+
+</script>
+
+
+
+
+
+
+

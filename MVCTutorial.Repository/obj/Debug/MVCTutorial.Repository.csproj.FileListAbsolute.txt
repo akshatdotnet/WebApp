@@ -1,0 +1,32 @@
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.dll.config
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.xml
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.csprojResolveAssemblyReference.cache
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.pdb
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.dll.config
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.pdb
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.xml
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.csprojResolveAssemblyReference.cache
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.dll.config
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\MVCTutorial.Repository.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.xml
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.csprojAssemblyReference.cache
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.csproj.CoreCompileInputs.cache
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Repository\obj\Debug\MVCTutorial.Repository.csproj.CopyComplete

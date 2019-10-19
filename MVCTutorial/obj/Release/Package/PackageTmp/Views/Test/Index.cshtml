@@ -1,0 +1,161 @@
+﻿@model MVCTutorial.Models.EmployeeViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
+<div class="container" style="width:40%;margin-top:2%">     
+    
+
+    <table class="table table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Address</th>
+            <th></th>
+        </tr>
+        <tbody>
+
+            @if (ViewBag.EmployeeList != null)
+            {
+
+                foreach (var item in ViewBag.EmployeeList)
+                {
+                    <tr id="row_@item.EmployeeId">
+                        <td>@item.Name</td>
+                        <td>@item.DepartmentName</td>
+                        <td>@item.Address</td>
+                        <td><a href="#" class="btn btn-danger" onclick="ConfirmDelete(@item.EmployeeId)"><i class="glyphicon glyphicon-trash"></i> </a> </td>
+                        <td><a href="#" class="btn btn-success" onclick="ShowEmployee(@item.EmployeeId)"><i class="glyphicon glyphicon-eye-open"></i> </a> </td>
+                        <td><a href="#" class="btn btn-success" onclick="AddEditEmployee(@item.EmployeeId)"><i class="glyphicon glyphicon-pencil"></i> </a> </td>
+
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+    <a href="#" class="btn btn-primary" onclick="AddEditEmployee(0)">New</a>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title">Delete Employee</h3>
+                </div>
+                <div class="modal-body" id="myModalBodyDiv">                    
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                    <a href="#" class="btn btn-success" onclick="DeleteEmployee()">Confirm</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3 class="modal-title">AddEdit Employee</h3>
+                </div>
+                <div class="modal-body" id="myModalBodyDiv1">
+
+
+                </div>
+              
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <input type="hidden" id="hiddenEmployeeId" />
+
+
+</div>
+
+<script>
+
+    var ConfirmDelete = function (EmployeeId) {
+
+        $("#hiddenEmployeeId").val(EmployeeId);
+        $("#myModal").modal('show');
+
+    }
+
+    var DeleteEmployee = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/Test/DeleteEmployee",
+            data: { EmployeeId: empId },
+            success: function (result) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+
+            }
+
+        })
+
+    }
+
+    var ShowEmployee=function(employeeId){
+    
+        var url="/Test/ShowEmployee?EmployeeId="+employeeId;
+
+        $("#myModalBodyDiv").load(url,function(){
+            $("#myModal").modal("show");
+        
+        })
+
+
+        //$.ajax({
+
+        //    type: "POST",
+        //    url: "/Test/ShowEmployee",
+        //    data: { EmployeeId: employeeId },
+        //    success: function (response) {
+               
+        //        $("#myModalBodyDiv").html(response);
+
+        //        $("#myModal").modal("show");
+         
+
+        //    }
+
+        //})
+    }
+
+    var AddEditEmployee=function(employeeId){
+    
+        var url="/Test/AddEditEmployee?EmployeeId="+employeeId;
+
+        $("#myModalBodyDiv1").load(url,function(){
+            $("#myModal1").modal("show");
+        
+        })
+
+
+    }
+</script>
+
+
+

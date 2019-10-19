@@ -1,0 +1,88 @@
+﻿@model MVCTutorial.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="panel panel-body">
+
+    <div class="col-md-3">
+        @{ Html.RenderAction("SideMenu", "Test");}
+
+    </div>
+
+    <div class="col-md-9">
+        <form id="myForm">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <h4>Login Here</h4>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control", @placeholder = "EmailId" })
+                    @Html.ValidationMessageFor(m => m.EmailId, "")
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                    @Html.ValidationMessageFor(m => m.Password, "")
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-primary " onclick="LoginUser()">Login</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+
+    var LoginUser = function () {
+        debugger
+        var data = $("#myForm").serialize();
+
+        if (!$("#myForm").valid())
+        {
+
+            return false;
+        }
+
+
+        $.ajax({
+            type: "Post",
+            url: "/Test/LoginUser",
+            data: data,
+            success: function (response) {
+                debugger
+                if (response == "fail") {
+
+                    window.location.href = "/Test/Login";
+                }
+                else if (response == "Admin") {
+
+                    window.location.href = "/Test/Admin";
+                }
+                else if (response == "SuperAdmin") {
+
+                    window.location.href = "/Test/SuperAdmin";
+                }
+                else {
+
+                    window.location.href = "/Test/Index";
+                }
+            }
+
+        })
+
+
+
+    }
+
+</script>
+

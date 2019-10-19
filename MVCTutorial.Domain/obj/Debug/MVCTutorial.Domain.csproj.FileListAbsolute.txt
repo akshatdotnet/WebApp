@@ -1,0 +1,16 @@
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Domain\bin\Debug\MVCTutorial.Domain.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Domain\bin\Debug\MVCTutorial.Domain.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.dll
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.csprojResolveAssemblyReference.cache
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\bin\Debug\MVCTutorial.Domain.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\bin\Debug\MVCTutorial.Domain.pdb
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.dll
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.pdb
+C:\Users\HP Lap\Desktop\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.csprojResolveAssemblyReference.cache
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\bin\Debug\MVCTutorial.Domain.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\bin\Debug\MVCTutorial.Domain.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.dll
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.pdb
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.csprojAssemblyReference.cache
+E:\DotNetProjects\Repository Pattern Project\Repository Pattern Project\MVCTutorial\MVCTutorial\MVCTutorial.Domain\obj\Debug\MVCTutorial.Domain.csproj.CoreCompileInputs.cache
