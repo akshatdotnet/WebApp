@@ -218,6 +218,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\chosenController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\fileuploadController.cs" />
     <Compile Include="Controllers\RepoController.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -500,6 +501,7 @@
     <Folder Include="documents\" />
     <Folder Include="images\" />
     <Folder Include="UploadedImage\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
