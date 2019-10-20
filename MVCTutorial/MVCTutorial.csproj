@@ -495,13 +495,13 @@
     <Content Include="Views\Test\AddContactAddOrEdit.cshtml" />
     <Content Include="Views\Test\SuperAdmin.cshtml" />
     <Content Include="Views\chosen\AddOrEdit.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="documents\" />
     <Folder Include="images\" />
     <Folder Include="UploadedImage\" />
-    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

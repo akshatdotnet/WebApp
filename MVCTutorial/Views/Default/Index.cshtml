@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        Age : <span id="spanOutput"></span>
+        <br /><br />
+        <div id="slider"></div>
+        <br />
+        <label for="txtMinAge">Minimum Age</label>
+        <input type="text" id="txtMinAge" />
+        <br /><br />
+        <label for="txtMaxAge">Maximum Age</label>
+        <input type="text" id="txtMaxAge" />
+
+    </div>
+    
+    <script src="~/Scripts/jquery-ui.min.js">
+
+        $(document).ready(function () {
+            var outputSpan = $('#spanOutput');
+            var sliderDiv = $('#slider');
+
+            sliderDiv.slider({
+                range: true,
+                min: 18,
+                max: 100,
+                values: [20, 30],
+                slide: function (event, ui) {
+                    outputSpan.html(ui.values[0] + ' - ' + ui.values[1] + ' Years');
+                },
+                stop: function (event, ui) {
+                    $('#txtMinAge').val(ui.values[0]);
+                    $('#txtMaxAge').val(ui.values[1]);
+                }
+            });
+
+            outputSpan.html(sliderDiv.slider('values', 0) + ' - '
+                + sliderDiv.slider('values', 1) + ' Years');
+            $('#txtMinAge').val(sliderDiv.slider('values', 0));
+            $('#txtMaxAge').val(sliderDiv.slider('values', 1));
+        });
+    </script>
+
+</body>
+</html>

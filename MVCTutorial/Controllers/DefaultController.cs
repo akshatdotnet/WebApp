@@ -14,10 +14,8 @@ namespace MVCTutorial.Controllers
             return View();
         }
 
-        // GET: Default
-        public ActionResult Index1()
-        {
-            return View();
-        }
+
     }
 }
+
+

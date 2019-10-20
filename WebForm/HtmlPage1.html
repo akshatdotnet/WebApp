@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Price Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #range {
+            font-weight:bold;
+        }
+
+    </style>
+    <script>
+
+        var details = {
+            "Printer Cable1": 14,
+            "Printer Cable2": 16,
+            "Printer Cable3": 12,
+            "Printer Cable4": 17,
+            "Printer Cable5": 23,
+            "Printer Cable6": 24,
+            "Printer Cable7": 31,
+            "Printer Cable8": 17,
+            "Printer Cable9": 16,
+            "Printer Cable10": 15,
+            "Printer Cable11": 18,
+            "Printer Cable12": 19,
+            "Printer Cable13": 14,
+            "Printer Cable14": 13
+        };
+
+        $(document).ready(function () {
+            
+            $("#slider").slider({
+                max: 50, range: true, values: [15, 30],
+                change: function (event, ui) {
+                    getdetails(ui.values[0], ui.values[1]);
+                }
+            });
+
+            var current = $("#slider").slider("option", "values");
+            getdetails(current[0], current[1]);
+        });
+
+        function getdetails(minimum, maximum) {
+            $("#range").text("$" + minimum + " - $" + maximum);
+
+            var result = "<table><tr><th>ProductName<th><th>Price (in $)</th></tr>";
+
+            for (var item in details) {
+                if (details[item] >= minimum && details[item] <= maximum)
+                {
+                    result += "<tr><td>" + item + "</td><td>" + details[item] + "</td></tr>";
+                }
+            }
+
+            result += "</table>";
+            $("#output").html(result);
+        }
+    </script>
+
+</head>
+<body>
+    <b>Price Range: </b><span id="range"></span>
+    <div id="slider"></div>
+    <div id="output"></div>
+
+
+</body>
+</html>
