@@ -12,23 +12,55 @@
             font-weight:bold;
         }
 
+        table {
+            border-collapse:collapse;
+            margin:10px;
+        }
+
+        table, th, td {
+            border:1px solid black;
+            padding:10px;
+        }
+
+        th, tr:nth-child(odd) {
+            background: #e6eeff;
+        }
+
+        th, tr:nth-child(even) {
+            background: #e6f2ff;
+        }
+
+        .ui-slider {
+            width:800px;
+            padding-left:10px;
+            background:#ccddff;
+        }
+
+        .ui-slider .ui-slider-range {
+                background: #1a66ff;
+        }
+
+            .ui-slider .ui-slider-handle {
+                background:#0063cc;
+            }
+            
     </style>
     <script>
 
         var details = {
             "Printer Cable1": 14,
             "Printer Cable2": 16,
-            "Printer Cable3": 12,
+            "Printer Cable3": 22,
             "Printer Cable4": 17,
             "Printer Cable5": 23,
-            "Printer Cable6": 24,
+            "Printer Cable6": 44,
             "Printer Cable7": 31,
             "Printer Cable8": 17,
-            "Printer Cable9": 16,
+            "Printer Cable9": 36,
             "Printer Cable10": 15,
-            "Printer Cable11": 18,
-            "Printer Cable12": 19,
-            "Printer Cable13": 14,
+            "Printer Cable11": 28,
+            "Printer Cable12": 39,
+            "Printer Cable13": 44,
             "Printer Cable14": 13
         };
 
@@ -48,7 +80,7 @@
         function getdetails(minimum, maximum) {
             $("#range").text("$" + minimum + " - $" + maximum);
 
-            var result = "<table><tr><th>ProductName<th><th>Price (in $)</th></tr>";
+            var result = "<table><tr><th>ProductName</th><th>Price (in $)</th></tr>";
 
             for (var item in details) {
                 if (details[item] >= minimum && details[item] <= maximum)
@@ -64,7 +96,7 @@
 
 </head>
 <body>
-    <b>Price Range: </b><span id="range"></span>
+    <b>Price Range: </b><span id="range"></span><br/><br/>
     <div id="slider"></div>
     <div id="output"></div>
 
