@@ -298,7 +298,7 @@ namespace MVCTutorial.Controllers
                 string recipient = ConfigurationManager.AppSettings["RecipientNumber"].ToString();
                 string APIKey = ConfigurationManager.AppSettings["APIKey"].ToString();
 
-                string message = "Your OTP Number is " + otpValue + " ( Sent By : Technotips-Ashish )";
+                string message = "Your OTP Number is " + otpValue + " ( Sent By : VaishanavTech )";
                 String encodedMessage = HttpUtility.UrlEncode(message);
 
                 using (var webClient = new WebClient())
@@ -310,7 +310,7 @@ namespace MVCTutorial.Controllers
                                          {"message" , encodedMessage},
                                          {"sender" , "TXTLCL"}});
 
-                    string result = System.Text.Encoding.UTF8.GetString(response);
+                    string result = System.Text.Encoding.UTF8.GetString(response);//"success";
 
                     var jsonObject = JObject.Parse(result);
 
@@ -369,11 +369,26 @@ namespace MVCTutorial.Controllers
         [HttpPost]
         public JsonResult LoginUser(RegistrationViewModel model)
         {
+            string result = "";
+            string BrowserSinatureId = GetUser_IP(model.UserName);//192.168.43.26
+
+            result = VerifySignature(BrowserSinatureId, model.UserName);
+            //if (model.OtpTxt != null)
+            //{
+            //    result = "";
+            //}
+            if (result == "signaturefail")
+            {
+                Session["OTP"] = "7777";
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+
+
             MVCTutorialEntities db = new MVCTutorialEntities();
 
             SiteUser user = db.SiteUsers.SingleOrDefault(x => x.EmailId == model.EmailId && x.Password == model.Password);
     
-            string result = "fail";
+            //string result = "fail";
             if (user != null)
             {
 
@@ -401,6 +416,81 @@ namespace MVCTutorial.Controllers
        
         }
 
+        //
+
+        public string VerifySignature(string ip, string userid)
+        {
+           return "signaturefail";
+
+        }
+
+
+        //Login SMS Integration
+
+        public static string GetUser_IP(string LoginId)
+        {
+            string VisitorsIPAddr = string.Empty;
+            bool GetLan = false;
+            try
+            {
+                if (System.Web.HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] != null)
+                {
+                    VisitorsIPAddr = System.Web.HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"].ToString();
+                    //MyFileIO.WriteToFile("GetUserIP.txt", "1" + VisitorsIPAddr + "|", false);
+                }
+                else if (System.Web.HttpContext.Current.Request.UserHostAddress.Length != 0)
+                {
+                    VisitorsIPAddr = System.Web.HttpContext.Current.Request.UserHostAddress;
+                    //MyFileIO.WriteToFile("GetUserIP.txt", "2" + VisitorsIPAddr + "|", false);
+                }
+                if (string.IsNullOrEmpty(VisitorsIPAddr) || VisitorsIPAddr.Trim() == "::1")
+                {
+                    GetLan = true;
+                    VisitorsIPAddr = string.Empty;
+                }
+                if (GetLan && string.IsNullOrEmpty(VisitorsIPAddr))
+                {
+                    //This is for Local(LAN) Connected ID Address
+                    string stringHostName = Dns.GetHostName();
+                    //Get Ip Host Entry
+                    IPHostEntry ipHostEntries = Dns.GetHostEntry(stringHostName);
+                    //Get Ip Address From The Ip Host Entry Address List
+                    IPAddress[] arrIpAddress = ipHostEntries.AddressList;
+
+                    try
+                    {
+                        VisitorsIPAddr = arrIpAddress[arrIpAddress.Length - 1].ToString();                        
+                    }
+                    catch
+                    {
+                        try
+                        {
+                            VisitorsIPAddr = arrIpAddress[0].ToString();                            
+                        }
+                        catch
+                        {
+                            try
+                            {
+                                arrIpAddress = Dns.GetHostAddresses(stringHostName);
+                                VisitorsIPAddr = arrIpAddress[0].ToString();                                
+                            }
+                            catch
+                            {
+                                VisitorsIPAddr = "127.0.0.1";
+                            }
+                        }
+                    }
+                }
+                
+                return VisitorsIPAddr;
+            }
+            catch (Exception ex)
+            {
+               return VisitorsIPAddr;
+            }
+        }
+
+        //===================
 
         public ActionResult Logout()
         {

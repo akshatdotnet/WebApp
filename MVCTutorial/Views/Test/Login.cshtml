@@ -37,11 +37,16 @@
                 </div>
             </div>
         </form>
-
+        <p id="demo"></p>
     </div>
 </div>
 
 <script>
+
+    @*$(document).ready(function () {
+
+        sessionStorage.setItem("OTP", '@Session["OTP"]')
+    });*@
 
     var LoginUser = function () {
         debugger
@@ -72,6 +77,12 @@
 
                     window.location.href = "/Test/SuperAdmin";
                 }
+                else if (response == "signaturefail") {
+                    @*sessionStorage.setItem("OTP", '@Session["OTP"]')*@            
+                    var OTP = "@HttpContext.Current.Session["OTP"]";
+                    OTPPop(OTP);
+                    //window.location.href = "/Test/Login";
+                }
                 else {
 
                     window.location.href = "/Test/Index";
@@ -82,6 +93,50 @@
 
 
 
+    }
+
+
+    function OTPPop(OTP) {
+        debugger
+        var OtpTxt;
+        var otp = prompt("Please enter your OTP:", "4444");
+        if (otp == null || otp == "") {
+            OtpTxt = "User cancelled the prompt.";
+        } else {
+            OtpTxt = otp;
+            //OtpTxt = "Your OTP " + otp + "!";
+
+            if (OTP == OtpTxt) {
+                OtpTxt = "Your OTP " + otp + "!";
+
+                document.getElementById("demo").innerHTML = OtpTxt;
+
+            } else {
+                document.getElementById("demo").innerHTML = "Invalid Otp";
+            }
+        }
+
+        //$.ajax({
+        //    type: "Post",
+        //    url: "/Test/LoginUser",
+        //    data: { OtpTxt },
+        //    success: function (response) {
+        //        debugger
+        //        if (response == "fail") {
+
+        //            window.location.href = "/Test/Login";
+        //        }                
+        //        else {
+
+        //            window.location.href = "/Test/Index";
+        //        }
+        //    }
+
+        //})
+
+
+        
+        
     }
 
 </script>

@@ -10,5 +10,9 @@ namespace MVCTutorial.Models
         public string Password { get; set; }
         public string Address { get; set; }
         public Nullable<int> RoleId { get; set; }
+
+        public string SignatureId { get; set; }
+
+        public string OtpTxt { get; set; }
     }
 }
