@@ -22,6 +22,8 @@
                 <div class="col-md-12">
                     @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control", @placeholder = "EmailId" })
                     @Html.ValidationMessageFor(m => m.EmailId, "")
+                    @Html.HiddenFor(m => m.SignatureId, new { id = "hat" })
+
                 </div>
             </div>
             <div class="form-group">
@@ -40,6 +42,43 @@
         <p id="demo"></p>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@2.1.0/dist/fingerprint2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var hasConsole = typeof console !== "undefined"
+
+    var fingerprintReport = function () {
+        var d1 = new Date()
+        Fingerprint2.get(function (components) {
+            var murmur = Fingerprint2.x64hash128(components.map(function (pair) { return pair.value }).join(), 31)
+            var d2 = new Date()
+            var time = d2 - d1
+            //document.querySelector("#time").textContent = time
+            //document.querySelector("#fp").textContent = murmur
+            $('#hat').val(murmur); 
+
+            var details = ""
+            if (hasConsole) {
+                //console.log("time", time)
+                console.log("fingerprint hash", murmur)
+            }
+        })
+    }
+
+    var cancelId
+    var cancelFunction
+
+    // see usage note in the README
+    if (window.requestIdleCallback) {
+        cancelId = requestIdleCallback(fingerprintReport)
+        cancelFunction = cancelIdleCallback
+    } else {
+        cancelId = setTimeout(fingerprintReport, 500)
+        cancelFunction = clearTimeout
+    }
+    fingerprintReport()
+    
+</script>
 
 <script>
 
@@ -78,7 +117,7 @@
                     window.location.href = "/Test/SuperAdmin";
                 }
                 else if (response == "signaturefail") {
-                    @*sessionStorage.setItem("OTP", '@Session["OTP"]')*@            
+                    @*sessionStorage.setItem("OTP", '@Session["OTP"]')*@
                     var OTP = "@HttpContext.Current.Session["OTP"]";
                     OTPPop(OTP);
                     //window.location.href = "/Test/Login";
@@ -106,14 +145,32 @@
             OtpTxt = otp;
             //OtpTxt = "Your OTP " + otp + "!";
 
-            if (OTP == OtpTxt) {
-                OtpTxt = "Your OTP " + otp + "!";
+            //if (OTP == OtpTxt) {
+            //    OtpTxt = "Your OTP " + otp + "!";
 
-                document.getElementById("demo").innerHTML = OtpTxt;
+            //    document.getElementById("demo").innerHTML = OtpTxt;
 
-            } else {
-                document.getElementById("demo").innerHTML = "Invalid Otp";
+            //} else {
+            //    document.getElementById("demo").innerHTML = "Invalid Otp";
+            //}
+
+            $.ajax({
+            type: "Post",
+                url: "/Test/VerifyOTP",
+            data: { OtpTxt },
+            success: function (response) {
+                debugger
+                if (response == false) {
+
+                    window.location.href = "/Test/Login";
+                }
+                else {
+
+                    window.location.href = "/Test/Index";
+                }
             }
+
+        })
         }
 
         //$.ajax({
@@ -125,7 +182,7 @@
         //        if (response == "fail") {
 
         //            window.location.href = "/Test/Login";
-        //        }                
+        //        }
         //        else {
 
         //            window.location.href = "/Test/Index";
@@ -135,8 +192,8 @@
         //})
 
 
-        
-        
+
+
     }
 
 </script>

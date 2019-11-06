@@ -337,16 +337,21 @@ namespace MVCTutorial.Controllers
             return View();
         }
         [HttpPost]
-        public JsonResult VerifyOTP(string otp)
+        public JsonResult VerifyOTP(string OtpTxt)//(string otp)
         {
             bool result = false;
+            //Session["OTP"] = "7777";
+            //string sessionOTP = Session["CurrentOTP"].ToString();
+            string sessionOTP = Session["OTP"].ToString();
 
-            string sessionOTP = Session["CurrentOTP"].ToString();
-
-            if (otp == sessionOTP)
+            if (OtpTxt == sessionOTP)
             {
                 result = true;
 
+            }
+            else
+            {
+                result = false;
             }
 
             return Json(result, JsonRequestBehavior.AllowGet);
@@ -370,7 +375,7 @@ namespace MVCTutorial.Controllers
         public JsonResult LoginUser(RegistrationViewModel model)
         {
             string result = "";
-            string BrowserSinatureId = GetUser_IP(model.UserName);//192.168.43.26
+            string BrowserSinatureId = model.SignatureId; //GetUser_IP(model.UserName);//192.168.43.26
 
             result = VerifySignature(BrowserSinatureId, model.UserName);
             //if (model.OtpTxt != null)
