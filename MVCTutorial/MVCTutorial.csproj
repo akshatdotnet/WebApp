@@ -220,6 +220,7 @@
     <Compile Include="Controllers\chosenController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\fileuploadController.cs" />
+    <Compile Include="Controllers\LandingOneController.cs" />
     <Compile Include="Controllers\RepoController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ValuesController1.cs" />
@@ -496,6 +497,9 @@
     <Content Include="Views\Test\SuperAdmin.cshtml" />
     <Content Include="Views\chosen\AddOrEdit.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\LandingOne\Index.cshtml" />
+    <Content Include="Views\LandingOne\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

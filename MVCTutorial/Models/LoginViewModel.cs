@@ -9,9 +9,7 @@ namespace MVCTutorial.Models
         public string EmailId { get; set; }
         [Required(ErrorMessage = "Please enter password")]
         public string Password { get; set; }
-        public string SignatureId
-        {
-            get; set;
-        }
+        public string SignatureId { get; set; }
+        
     }
 }

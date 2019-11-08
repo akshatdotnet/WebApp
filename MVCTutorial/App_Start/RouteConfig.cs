@@ -12,10 +12,11 @@ namespace MVCTutorial
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
+                 defaults: new { controller = "LandingOne", action = "Login", id = UrlParameter.Optional }
                 //public class DefaultController : Controller
                 //defaults: new { controller = "Default", action = "Index", id = UrlParameter.Optional}
                 //defaults: new { controller = "chosen", action = "AddOrEdit", id = UrlParameter.Optional }
-                defaults: new { controller = "Test", action = "Index", id = UrlParameter.Optional }
+                //defaults: new { controller = "Test", action = "Index", id = UrlParameter.Optional }
                 //defaults: new { controller = "Repo", action = "Index", id = UrlParameter.Optional }chosen
             );
         }
