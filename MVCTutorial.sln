@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTutorial.Repository", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForm", "WebForm\WebForm.csproj", "{56C28CAC-7C00-4A3D-8ED3-C7B3AE21268C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{0EA37194-D25F-406D-8C68-97A23F62CAD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{56C28CAC-7C00-4A3D-8ED3-C7B3AE21268C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56C28CAC-7C00-4A3D-8ED3-C7B3AE21268C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56C28CAC-7C00-4A3D-8ED3-C7B3AE21268C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EA37194-D25F-406D-8C68-97A23F62CAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA37194-D25F-406D-8C68-97A23F62CAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA37194-D25F-406D-8C68-97A23F62CAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA37194-D25F-406D-8C68-97A23F62CAD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
